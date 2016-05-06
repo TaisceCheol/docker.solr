@@ -3,13 +3,13 @@
 
 To build image:
 
-```docker
+```bash
 docker build -t itma.solr .
 ```
 
 To launch:
 
-```docker
+```bash
 docker-compose up
 ```
 
@@ -21,6 +21,6 @@ curl http://docker:8983/solr/blacklight/update?commit=true -H "Content-Type: tex
 
 To stop and clean up:
 
-```docker
+```bash
 docker-compose down
 ``` 
