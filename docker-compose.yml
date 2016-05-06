@@ -1,0 +1,8 @@
+solr:
+  image: itma.solr
+  volumes:
+    - ./solrconfig:/solrconfig
+  command: solr-create -c blacklight -d /solrconfig
+  ports:
+    - "8983:8983"
+
