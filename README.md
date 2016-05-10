@@ -19,6 +19,11 @@ To import documents:
 curl http://docker:8983/solr/blacklight/update?commit=true -H "Content-Type: text/xml" --data-binary @sample_solr_import.xml
 ```
 
+To delete all documents:
+```bash
+curl http://docker:8983/solr/blacklight/update?commit=true -H "Content-Type: text/xml" --data-binary '<delete><query>*:*</query></delete>'
+```
+
 To stop and clean up:
 
 ```bash
