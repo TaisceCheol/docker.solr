@@ -1,3 +1,10 @@
+blacklight:
+  image: itma.blacklight
+  ports:
+    - "3000:3000"
+  links: 
+    - solr
+
 solr:
   image: itma.solr
   volumes:
@@ -5,4 +12,6 @@ solr:
   command: solr-create -c blacklight -d /solrconfig
   ports:
     - "8983:8983"
+  expose:
+    - "8983"
 

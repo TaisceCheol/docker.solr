@@ -40,6 +40,8 @@ RUN mkdir -p /opt/solr && \
 COPY scripts /opt/docker-solr/scripts
 RUN chown -R $SOLR_USER:$SOLR_USER /opt/docker-solr
 
+COPY myconfig/schema.xml /opt/docker-solr/
+
 ENV PATH /opt/solr/bin:/opt/docker-solr/scripts:$PATH
 
 EXPOSE 8983
