@@ -16,7 +16,6 @@ solr:
   expose:
     - "8983"
 
-
 postgres:
   image: postgres
   ports:
