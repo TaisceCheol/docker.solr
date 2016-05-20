@@ -41,6 +41,7 @@ COPY scripts /opt/docker-solr/scripts
 RUN chown -R $SOLR_USER:$SOLR_USER /opt/docker-solr
 
 COPY solrconfig/schema.xml /opt/docker-solr/
+COPY solrconfig/solrconfig.xml /opt/docker-solr/
 
 ENV PATH /opt/solr/bin:/opt/docker-solr/scripts:$PATH
 
