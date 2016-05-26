@@ -19,6 +19,14 @@
 stopworda
 stopwordb
 
+photograph
+irish
+sound
+music 
+collect
+song
+
+
 #Standard english stop words taken from Lucene's StopAnalyzer
 a
 an
