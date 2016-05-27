@@ -1,0 +1,22 @@
+#!/bin/bash
+PORT="80"
+
+while getopts ":p:" opt; do
+  case $opt in
+    p)
+		PORT="$OPTARG"
+      ;;   
+    \?)
+      echo "Invalid option: -$OPTARG" >&2
+      exit 1
+      ;;
+  esac
+done
+
+until [[ $(nmap -p $PORT localhost | grep open | awk '{print $2}') == 'open' ]]
+do
+	echo "Waiting for port $PORT to open..."
+	sleep 5
+done
+
+echo  "Port $PORT is open."

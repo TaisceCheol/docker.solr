@@ -299,9 +299,10 @@
       <str name="fl">*</str>
       <str name="rows">1</str>
       <str name="q">{!term f=id v=$id}</str> <!-- use id=666 instead of q=id:666 -->
-     <str name="hl">on</str>
-     <str name="hl.fl">title_display title_t people_display collection_display format material_display contents_t</str>
-     <str name="hl.fragsize">0</str>          
+      <str name="hl">on</str>
+      <str name="hl.fl">title_t</str>
+      <str name="hl.fragsize">0</str>   
+      <str name="f.title_t.hl.alternateField">title_t</str>
     </lst>
 
   </requestHandler>
